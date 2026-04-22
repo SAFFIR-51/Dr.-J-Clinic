@@ -33,7 +33,7 @@ export default function NaverMap() {
 
   useEffect(() => {
     let cancelled = false;
-    const clientId = '2dxl2whqyb';
+    const clientId = 'lsh4eg05nz';
 
     window.navermap_authFailure = () => {
       console.error('Naver Maps 인증 실패: Client ID를 확인해주세요.');
