@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'motion/react';
 import { MapPin, Phone, Car, Bus, TrainFront, Clock, ArrowRight } from 'lucide-react';
 import ArcHero from '../components/ArcHero';
+import NaverMap from '../components/NaverMap';
 import { useLanguage } from '../contexts/LanguageContext';
 
 const HOURS_TIMES = [
@@ -55,16 +56,7 @@ export default function Location() {
           className="relative w-full"
           style={{ height: '60vh', minHeight: 400 }}
         >
-          <iframe
-            src="https://maps.google.com/maps?q=인천+남동구+서창남로+81+투엠프라자&output=embed&z=16&hl=ko"
-            width="100%"
-            height="100%"
-            style={{ border: 0, display: 'block' }}
-            allowFullScreen
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-            title="닥터제이앤미의원 위치"
-          />
+          <NaverMap />
           {/* 주소 오버레이 */}
           <div className="absolute bottom-6 left-6 z-10">
             <div className="bg-white/96 backdrop-blur-sm px-5 py-4 rounded-2xl shadow-xl">
