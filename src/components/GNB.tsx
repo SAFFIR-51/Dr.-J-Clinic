@@ -1,10 +1,8 @@
 ﻿import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'motion/react';
-import { X, ChevronDown, Globe } from 'lucide-react';
+import { X, ChevronDown } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
-
-const LANGUAGES = ['KR', 'EN'];
 
 interface GNBProps {
   open: boolean;
@@ -126,7 +124,7 @@ const MOBILE_MENU: MobileMenuItem[] = [
 ];
 
 export default function GNB({ open, onClose }: GNBProps) {
-  const { lang, setLang, t } = useLanguage();
+  const { t } = useLanguage();
   const [openSections, setOpenSections] = useState<string[]>([]);
 
   useEffect(() => {
@@ -165,25 +163,6 @@ export default function GNB({ open, onClose }: GNBProps) {
               <img src="/logo-1.png" alt="닥터제이앤미의원" className="h-[44px] w-auto" />
             </Link>
             <div className="flex items-center gap-3">
-              {/* 언어 선택 */}
-              <div className="flex items-center gap-1">
-                <Globe className="w-4 h-4 text-gray-400" />
-                {LANGUAGES.map((l, i) => (
-                  <React.Fragment key={l}>
-                    <button
-                      onClick={() => setLang(l as 'KR' | 'EN')}
-                      className={`text-[11px] font-semibold px-1 transition-colors ${
-                        lang === l ? 'text-[#111]' : 'text-gray-300'
-                      }`}
-                    >
-                      {l}
-                    </button>
-                    {i < LANGUAGES.length - 1 && (
-                      <span className="text-gray-200 text-[10px] select-none">|</span>
-                    )}
-                  </React.Fragment>
-                ))}
-              </div>
               <button
                 onClick={handleClose}
                 className="p-2 hover:opacity-50 transition-opacity"

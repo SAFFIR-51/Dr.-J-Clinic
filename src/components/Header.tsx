@@ -1,6 +1,6 @@
 ﻿import React, { useState, useEffect, useRef } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { ChevronDown, Globe } from 'lucide-react';
+import { ChevronDown } from 'lucide-react';
 import GNB from './GNB';
 import { useLanguage } from '../contexts/LanguageContext';
 
@@ -111,34 +111,20 @@ function getNavMenu(t: (k: string) => string): NavItem[] {
   ];
 }
 
-const LANGUAGES = ['KR', 'EN'];
-
 export default function Header() {
   const location = useLocation();
   const alwaysDark = ALWAYS_DARK_PAGES.includes(location.pathname);
-  const { lang, setLang, t } = useLanguage();
+  const { t } = useLanguage();
   const [gnbOpen, setGnbOpen] = useState(false);
   const [activeMenu, setActiveMenu] = useState<string | null>(null);
   const [activeGroupIndex, setActiveGroupIndex] = useState(0);
-  const [langOpen, setLangOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const closeTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
-  const langRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
     window.addEventListener('scroll', onScroll, { passive: true });
     return () => window.removeEventListener('scroll', onScroll);
-  }, []);
-
-  useEffect(() => {
-    const handler = (e: MouseEvent) => {
-      if (langRef.current && !langRef.current.contains(e.target as Node)) {
-        setLangOpen(false);
-      }
-    };
-    document.addEventListener('mousedown', handler);
-    return () => document.removeEventListener('mousedown', handler);
   }, []);
 
   const openMenu = (label: string) => {
@@ -304,35 +290,33 @@ export default function Header() {
             ))}
           </nav>
 
-          {/* 우측: 언어 선택(globe 드롭다운) + 햄버거(모바일만) */}
+          {/* 우측: 예약상담 버튼 + 햄버거(모바일) */}
           <div className="flex items-center gap-3">
-            {/* Globe 언어 드롭다운 - 데스크탑만 */}
-            <div ref={langRef} className="relative hidden md:block">
-              <button
-                onClick={() => setLangOpen((v) => !v)}
-                className={`flex items-center gap-1.5 p-1.5 transition-colors ${(scrolled || alwaysDark) ? 'text-gray-400 hover:text-[#111]' : 'text-white/70 hover:text-white'}`}
-                aria-label="언어 선택"
-              >
-                <Globe className="w-[18px] h-[18px]" />
-                <span className="text-[11px] font-semibold tracking-wide">{lang}</span>
-                <ChevronDown className={`w-3 h-3 transition-transform duration-200 ${langOpen ? 'rotate-180' : ''}`} />
-              </button>
-              {langOpen && (
-                <div className="absolute right-0 top-full mt-1 bg-white border border-gray-100 shadow-[0_8px_24px_rgba(0,0,0,0.10)] py-1 min-w-[80px] z-50">
-                  {LANGUAGES.map((l) => (
-                    <button
-                      key={l}
-                      onClick={() => { setLang(l as 'KR' | 'EN'); setLangOpen(false); }}
-                      className={`w-full text-left px-4 py-2 text-[12px] font-semibold transition-colors ${
-                        lang === l ? 'text-[#111] bg-gray-50' : 'text-gray-400 hover:text-[#111] hover:bg-gray-50'
-                      }`}
-                    >
-                      {l}
-                    </button>
-                  ))}
-                </div>
-              )}
-            </div>
+            {/* 예약 / 상담 버튼 - 데스크탑만 */}
+            <a
+              href="https://naver.me/FmfL7fiJ"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`hidden md:inline-flex items-center px-5 py-2 text-[13px] font-semibold tracking-wide rounded-full border transition-all duration-300 ${
+                scrolled || alwaysDark
+                  ? 'border-[#111] text-[#111] hover:bg-[#111] hover:text-white'
+                  : 'border-white text-white hover:bg-white hover:text-[#111]'
+              }`}
+            >
+              예약
+            </a>
+            <a
+              href="https://pf.kakao.com/_YFJas"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`hidden md:inline-flex items-center px-5 py-2 text-[13px] font-semibold tracking-wide rounded-full transition-all duration-300 ${
+                scrolled || alwaysDark
+                  ? 'bg-[#111] text-white hover:bg-[#333]'
+                  : 'bg-white text-[#111] hover:bg-white/90'
+              }`}
+            >
+              상담
+            </a>
 
             {/* 모바일 햄버거 - 모바일만 */}
             <button
