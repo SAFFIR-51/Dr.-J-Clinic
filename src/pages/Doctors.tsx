@@ -53,7 +53,7 @@ export default function Doctors() {
           >
             {/* 좌: 사진 */}
             <div className="md:w-[340px] shrink-0">
-              <div className="relative overflow-hidden bg-[#f3f1ef] aspect-[3/4] rounded-xl shadow-md">
+              <div className="relative overflow-hidden bg-[#f3f1ef] rounded-xl shadow-md" style={{ aspectRatio: '3/4', minHeight: 360 }}>
                 <img
                   src={DOCTOR.image}
                   alt={DOCTOR.name}

@@ -321,94 +321,93 @@ function FeaturesSection() {
   ];
 
   return (
-    <section className="relative flex flex-col md:flex-row bg-white">
-      {/* 좌측 sticky */}
-      <div className="w-full md:w-[45%] h-[50vh] md:h-screen md:sticky top-0 overflow-hidden">
-        {FEATURES_T.map((f, i) => (
-          <div
-            key={i}
-            className={`absolute inset-0 transition-all duration-1000 ${active === i ? 'opacity-100 scale-100' : 'opacity-0 scale-105'}`}
-          >
-            <img src={f.bg} alt="" className="w-full h-full object-cover" />
-            <div className="absolute inset-0 bg-black/40" />
-          </div>
-        ))}
-        <div className="relative z-10 h-full flex flex-col justify-between p-10 md:p-14 text-white">
-          {/* 상단 */}
-          <div>
-            <p className="text-[10px] font-black tracking-[0.45em] text-white/40 uppercase mb-3">{t('home.features.label')}</p>
-            <h2
-              className="leading-tight whitespace-pre-line"
-              style={{
-                fontFamily: '"Cormorant Garamond", Georgia, serif',
-                fontSize: 'clamp(34px, 4vw, 52px)',
-                fontWeight: 500,
-                fontStyle: 'italic',
-              }}
-            >
-              {t('home.features.title')}
-            </h2>
-          </div>
-
-          {/* 하단 — 진행 도트 */}
-          <div>
-            <p className="text-[12px] text-white/60 leading-[1.9] mb-8 max-w-[220px] whitespace-pre-line">
-              {t('home.features.desc')}
-            </p>
-            <div className="flex gap-2">
-              {FEATURES_T.map((_, i) => (
-                <div
-                  key={i}
-                  className="transition-all duration-500"
-                  style={{
-                    width: active === i ? 24 : 6,
-                    height: 6,
-                    borderRadius: 3,
-                    backgroundColor: active === i ? 'white' : 'rgba(255,255,255,0.25)',
-                  }}
-                />
-              ))}
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* 우측 스크롤 */}
-      <div className="w-full md:w-[55%]">
+    <section className="relative bg-white">
+      {/* ── 모바일 레이아웃 ── */}
+      <div className="md:hidden">
         {FEATURES_T.map((f, i) => (
           <motion.div
             key={i}
-            onViewportEnter={() => setActive(i)}
-            viewport={{ margin: '-50% 0px -50% 0px' }}
-            className="min-h-screen flex flex-col justify-center py-20 px-10 md:px-16 border-b border-gray-100 last:border-0"
+            initial={{ opacity: 0, y: 24 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7 }}
+            className="border-b border-gray-100 last:border-0"
           >
-            <span
-              className="font-serif italic leading-none select-none mb-4"
-              style={{ fontSize: 'clamp(80px, 12vw, 130px)', color: 'rgba(0,0,0,0.05)', fontWeight: 300 }}
-            >
-              {f.num}
-            </span>
-            <div className="w-10 h-[2px] bg-[#6b9ab8] mb-8" />
-            <h3
-              className="text-[#111] whitespace-pre-line leading-tight tracking-tight mb-5"
-              style={{ fontSize: 'clamp(26px, 3vw, 36px)', fontWeight: 900 }}
-            >
-              {f.title}
-            </h3>
-            <p className="text-[14px] text-gray-400 whitespace-pre-line leading-[2] mb-10">
-              {f.desc}
-            </p>
-            <div className="overflow-hidden rounded-2xl" style={{ aspectRatio: '16/10' }}>
-              <motion.img
-                src={f.image}
-                alt={f.title}
-                className="w-full h-full object-cover"
-                whileHover={{ scale: 1.04 }}
-                transition={{ duration: 0.6 }}
-              />
+            {/* 배경 이미지 */}
+            <div className="relative overflow-hidden" style={{ aspectRatio: '4/3' }}>
+              <img src={f.bg} alt="" className="w-full h-full object-cover" />
+              <div className="absolute inset-0 bg-black/40" />
+              <div className="absolute inset-0 flex flex-col justify-end p-7 text-white">
+                <p className="text-[10px] font-black tracking-[0.45em] text-white/50 uppercase mb-2">{t('home.features.label')}</p>
+                <h2
+                  className="leading-tight whitespace-pre-line"
+                  style={{ fontFamily: '"Cormorant Garamond", Georgia, serif', fontSize: 36, fontWeight: 500, fontStyle: 'italic' }}
+                >
+                  {t('home.features.title')}
+                </h2>
+              </div>
+            </div>
+            {/* 텍스트 */}
+            <div className="px-8 py-10">
+              <span className="font-serif italic leading-none select-none block mb-3" style={{ fontSize: 72, color: 'rgba(0,0,0,0.05)', fontWeight: 300 }}>{f.num}</span>
+              <div className="w-8 h-[2px] bg-[#6b9ab8] mb-6" />
+              <h3 className="text-[#111] whitespace-pre-line leading-tight tracking-tight mb-4 text-[24px] font-black">{f.title}</h3>
+              <p className="text-[13px] text-gray-400 whitespace-pre-line leading-[2]">{f.desc}</p>
             </div>
           </motion.div>
         ))}
+      </div>
+
+      {/* ── 데스크탑 레이아웃 (sticky 사이드) ── */}
+      <div className="hidden md:flex flex-row">
+        {/* 좌측 sticky */}
+        <div className="w-[45%] h-screen sticky top-0 overflow-hidden">
+          {FEATURES_T.map((f, i) => (
+            <div
+              key={i}
+              className={`absolute inset-0 transition-all duration-1000 ${active === i ? 'opacity-100 scale-100' : 'opacity-0 scale-105'}`}
+            >
+              <img src={f.bg} alt="" className="w-full h-full object-cover" />
+              <div className="absolute inset-0 bg-black/40" />
+            </div>
+          ))}
+          <div className="relative z-10 h-full flex flex-col justify-between p-14 text-white">
+            <div>
+              <p className="text-[10px] font-black tracking-[0.45em] text-white/40 uppercase mb-3">{t('home.features.label')}</p>
+              <h2 className="leading-tight whitespace-pre-line" style={{ fontFamily: '"Cormorant Garamond", Georgia, serif', fontSize: 'clamp(34px, 4vw, 52px)', fontWeight: 500, fontStyle: 'italic' }}>
+                {t('home.features.title')}
+              </h2>
+            </div>
+            <div>
+              <p className="text-[12px] text-white/60 leading-[1.9] mb-8 max-w-[220px] whitespace-pre-line">{t('home.features.desc')}</p>
+              <div className="flex gap-2">
+                {FEATURES_T.map((_, i) => (
+                  <div key={i} className="transition-all duration-500" style={{ width: active === i ? 24 : 6, height: 6, borderRadius: 3, backgroundColor: active === i ? 'white' : 'rgba(255,255,255,0.25)' }} />
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* 우측 스크롤 */}
+        <div className="w-[55%]">
+          {FEATURES_T.map((f, i) => (
+            <motion.div
+              key={i}
+              onViewportEnter={() => setActive(i)}
+              viewport={{ margin: '-50% 0px -50% 0px' }}
+              className="min-h-screen flex flex-col justify-center py-20 px-16 border-b border-gray-100 last:border-0"
+            >
+              <span className="font-serif italic leading-none select-none mb-4" style={{ fontSize: 'clamp(80px, 12vw, 130px)', color: 'rgba(0,0,0,0.05)', fontWeight: 300 }}>{f.num}</span>
+              <div className="w-10 h-[2px] bg-[#6b9ab8] mb-8" />
+              <h3 className="text-[#111] whitespace-pre-line leading-tight tracking-tight mb-5" style={{ fontSize: 'clamp(26px, 3vw, 36px)', fontWeight: 900 }}>{f.title}</h3>
+              <p className="text-[14px] text-gray-400 whitespace-pre-line leading-[2] mb-10">{f.desc}</p>
+              <div className="overflow-hidden rounded-2xl" style={{ aspectRatio: '16/10' }}>
+                <motion.img src={f.image} alt={f.title} className="w-full h-full object-cover" whileHover={{ scale: 1.04 }} transition={{ duration: 0.6 }} />
+              </div>
+            </motion.div>
+          ))}
+        </div>
       </div>
     </section>
   );
