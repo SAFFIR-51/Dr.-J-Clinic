@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'motion/react';
 import { ArrowRight } from 'lucide-react';
+import NaverMap from './NaverMap';
 
 export default function ContactSection() {
   return (
@@ -14,16 +15,7 @@ export default function ContactSection() {
             viewport={{ once: true }}
             className="rounded-2xl overflow-hidden aspect-[4/3] relative"
           >
-            <iframe
-              src="https://maps.google.com/maps?q=인천+남동구+서창남로+81+투엠프라자&output=embed&z=16&hl=ko"
-              width="100%"
-              height="100%"
-              style={{ border: 0, position: 'absolute', inset: 0 }}
-              allowFullScreen
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-              title="닥터제이앤미의원 위치"
-            />
+            <NaverMap />
           </motion.div>
 
           {/* 정보 */}
