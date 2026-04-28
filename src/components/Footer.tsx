@@ -9,7 +9,7 @@ export default function Footer() {
         <div className="flex flex-col items-center text-center">
           {/* 로고 */}
           <div className="mb-8">
-            <img src="/logo2-1.png" alt="닥터제이앤미의원" className="h-[64px] w-auto mx-auto" />
+            <img src="/logo-light.png" alt="닥터제이앤미의원" className="h-[48px] w-auto mx-auto" />
           </div>
 
           {/* 사업자 정보 */}

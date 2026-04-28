@@ -1,7 +1,7 @@
 import React from 'react';
+import NaverMap from './NaverMap';
 import { motion } from 'motion/react';
 import { ArrowRight } from 'lucide-react';
-import NaverMap from './NaverMap';
 
 export default function ContactSection() {
   return (
@@ -60,7 +60,7 @@ export default function ContactSection() {
                 {[
                   { day: '월 · 화 · 목 · 금', time: 'AM 09:30 – PM 07:00' },
                   { day: '수요일',             time: 'AM 11:00 – PM 08:00' },
-                  { day: '토요일',             time: 'AM 09:00 – PM 03:00' },
+                  { day: '토요일 (점심시간 없음)', time: 'AM 09:00 – PM 03:00' },
                   { day: '점심시간',           time: 'PM 01:00 – PM 02:00' },
                 ].map((row) => (
                   <div key={row.day} className="flex justify-between items-center border-b border-gray-100 pb-2">
@@ -68,7 +68,7 @@ export default function ContactSection() {
                     <span className="font-bold text-[#111]">{row.time}</span>
                   </div>
                 ))}
-                <p className="text-red-500 text-[12px] font-bold pt-1">일 · 공휴일 휴진 (공휴일 사전공지)</p>
+                <p className="text-red-500 text-[12px] font-bold pt-1">일 · 공휴일 휴진</p>
               </div>
             </div>
           </motion.div>

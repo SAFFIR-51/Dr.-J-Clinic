@@ -37,12 +37,11 @@ export const SecretDurePage = () => <TreatmentPage data={T2.secretDure} />;
 export const NobelinPage = () => <TreatmentPage data={T2.nobelin} />;
 export const MiinLaserPage = () => <TreatmentPage data={T2.miinLaser} />;
 export const AetonLaserPage = () => <TreatmentPage data={T2.aetonLaser} />;
+export const Co2LaserPage = () => <TreatmentPage data={T2.co2Laser} />;
 
 export const IbpsPage = () => <TreatmentPage data={T2.ibps} />;
 export const BlackpeelPage = () => <TreatmentPage data={T2.blackpeel} />;
 export const AquapeelPage = () => <TreatmentPage data={T2.aquapeel} />;
-export const PdtPage = () => <TreatmentPage data={T2.pdt} />;
-export const SecretLaserPage = () => <TreatmentPage data={T2.secretLaser} />;
 export const LdmPage = () => <TreatmentPage data={T2.ldm} />;
 export const DermashinePage = () => <TreatmentPage data={T2.dermashine} />;
 export const NdaPlusPage = () => <TreatmentPage data={T2.ndaPlus} />;
@@ -52,3 +51,4 @@ export const ApogeePlusPage = () => <TreatmentPage data={T2.apogeePlus} />;
 export const RedInjectionPage = () => <TreatmentPage data={T2.redInjection} />;
 export const NobleshapePage = () => <TreatmentPage data={T2.nobleshape} />;
 export const OnicoLaserPage = () => <TreatmentPage data={T2.onicoLaser} />;
+export const CarboxyPage = () => <TreatmentPage data={T2.carboxy} />;

@@ -22,11 +22,11 @@ import {
   // 리프팅
   ShrinkPage, InmodePage, OllagioPage, DoubloGoldPage,
   // 색소
-  PicosurePage, SecretDurePage, NobelinPage, MiinLaserPage, AetonLaserPage,
+  PicosurePage, SecretDurePage, NobelinPage, MiinLaserPage, AetonLaserPage, Co2LaserPage,
   // 스킨케어
-  IbpsPage, BlackpeelPage, AquapeelPage, PdtPage, SecretLaserPage, LdmPage, DermashinePage, NdaPlusPage, BeloteroRevivePage,
+  IbpsPage, BlackpeelPage, AquapeelPage, LdmPage, DermashinePage, NdaPlusPage, BeloteroRevivePage,
   // 바디·제모
-  ApogeePlusPage, RedInjectionPage, NobleshapePage, OnicoLaserPage,
+  ApogeePlusPage, RedInjectionPage, NobleshapePage, OnicoLaserPage, CarboxyPage,
 } from './pages/treatments';
 
 // 페이지 이동 시 스크롤 맨 위로
@@ -104,13 +104,12 @@ export default function App() {
           <Route path="/nobelin" element={<NobelinPage />} />
           <Route path="/miiin-laser" element={<MiinLaserPage />} />
           <Route path="/aeton-laser" element={<AetonLaserPage />} />
+          <Route path="/co2-laser" element={<Co2LaserPage />} />
 
           {/* 스킨케어 */}
           <Route path="/ibps" element={<IbpsPage />} />
           <Route path="/blackpeel" element={<BlackpeelPage />} />
           <Route path="/aquapeel" element={<AquapeelPage />} />
-          <Route path="/pdt" element={<PdtPage />} />
-          <Route path="/secret-laser" element={<SecretLaserPage />} />
           <Route path="/ldm" element={<LdmPage />} />
           <Route path="/dermashine" element={<DermashinePage />} />
           <Route path="/nda-plus" element={<NdaPlusPage />} />
@@ -121,6 +120,7 @@ export default function App() {
           <Route path="/red-injection" element={<RedInjectionPage />} />
           <Route path="/nobleshape" element={<NobleshapePage />} />
           <Route path="/onico-laser" element={<OnicoLaserPage />} />
+          <Route path="/carboxy" element={<CarboxyPage />} />
 
           {/* 404 */}
           <Route

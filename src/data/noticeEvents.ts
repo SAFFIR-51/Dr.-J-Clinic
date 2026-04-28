@@ -19,11 +19,11 @@ export const ALWAYS: NoticeEvent[] = [
   {
     id: 1, tab: 'always', badge: 'ALWAYS ON',
     title: '첫 방문 무료 상담', subtitle: '전문의 1:1 피부 진단',
-    desc: '처음 방문하시는 모든 분께 피부과 전문의와의 1:1 맞춤 상담을 무료로 제공합니다.',
+    desc: '처음 방문하시는 모든 분께 전문의와의 1:1 맞춤 상담을 무료로 제공합니다.',
     period: '상시 진행',
     image: '/images/clinic/clinic1.png',
     detailImage: '/images/home2.png',
-    detailText: '처음 방문하시는 모든 분께 피부과 전문의와의 1:1 맞춤 상담을 무료로 제공합니다.\n\n피부 타입 분석부터 시술 방향까지 충분한 시간을 드립니다.\n네이버 예약 또는 카카오 채널을 통해 사전 예약 후 방문해 주세요.\n\n※ 상시 진행, 별도 기간 제한 없음',
+    detailText: '처음 방문하시는 모든 분께 전문의와의 1:1 맞춤 상담을 무료로 제공합니다.\n\n피부 타입 분석부터 시술 방향까지 충분한 시간을 드립니다.\n네이버 예약 또는 카카오 채널을 통해 사전 예약 후 방문해 주세요.\n\n※ 상시 진행, 별도 기간 제한 없음',
   },
   {
     id: 2, tab: 'always', badge: 'VIP',
@@ -39,7 +39,7 @@ export const ALWAYS: NoticeEvent[] = [
     title: '복합 시술 패키지 할인', subtitle: '2가지 이상 시술 상시 혜택',
     desc: '2가지 이상 시술을 함께 받으시면 특별 패키지 할인을 적용해드립니다.',
     period: '상시 진행',
-    image: '/images/clinic/clinic4.jpg',
+    image: '/images/clinic/clinic4.png',
     detailImage: '/images/home8.png',
     detailText: '2가지 이상 시술을 함께 진행하시면 패키지 할인 혜택을 적용해 드립니다.\n상담 시 원하시는 시술을 말씀해 주시면 최적의 조합을 설계해 드립니다.\n\n· 보톡스 + 필러 조합\n· 리프팅 + 스킨케어 조합\n\n※ 조합에 따라 할인율 상이, 상담 시 확인',
   },

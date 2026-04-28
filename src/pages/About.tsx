@@ -9,7 +9,7 @@ const BLUE = '#6b9ab8';
 const CLINIC_IMAGES = [
   { src: '/images/clinic/clinic1.png', w: 'w-[300px]' },
   { src: '/images/clinic/clinic3.jpg', w: 'w-[340px]' },
-  { src: '/images/clinic/clinic4.jpg', w: 'w-[280px]' },
+  { src: '/images/clinic/clinic4.png', w: 'w-[280px]' },
   { src: '/images/clinic/clinic5.png', w: 'w-[320px]' },
   { src: '/images/clinic/clinic6.png', w: 'w-[260px]' },
 ];
@@ -32,6 +32,19 @@ export default function About() {
     { name: '더블로골드', img: '/images/device/doubloGold.png', tag: 'Dual HIFU', desc: t('about.device.doublo') || '이중 초음파로 피부 표면과 심부층을 동시에 케어. 탁월한 리프팅 효과와 높은 안전성으로 검증된 장비입니다.' },
     { name: '올리지오', img: '/images/device/ollagio.png', tag: 'RF Skin Tightening', desc: t('about.device.olligio') || '25개 핀을 통한 균일한 RF 에너지 전달로 통증은 최소화하고 피부 탄력 개선 효과는 극대화합니다.' },
     { name: '노블쉐이프', img: '/images/device/nobleshape.png', tag: 'Body · Fat Reduction', desc: t('about.device.nobleshape') || '고강도 집속 초음파로 지방세포를 직접 파괴하고 근육을 강화. 탄탄한 바디 라인을 설계합니다.' },
+    { name: '미인레이저', img: '/images/device/miinLaser.png', tag: 'Pigmentation · Toning', desc: '1064nm Nd:YAG 토닝 레이저로 기미·색소침착을 균일하게 개선하고 전체적인 피부 톤을 밝혀줍니다.' },
+    { name: '노블린', img: '/images/device/nobelin.png', tag: 'Dual Wavelength Laser', desc: '1064nm+755nm 듀얼 파장으로 표피·진피의 색소와 혈관 병변을 한 번에 복합 치료합니다.' },
+    { name: '시크릿 듀오', img: '/images/device/secretDure.png', tag: 'Fractional Laser · RF', desc: '1540nm 프락셔널 레이저와 마이크로니들 고주파가 결합된 장비로 모공·탄력·색소침착을 복합적으로 개선합니다.' },
+    { name: '에이톤레이저', img: '/images/device/aetonLaser.png', tag: 'Vascular · Pigmentation', desc: '혈관 확장·홍조·색소 병변에 특화된 레이저로 다양한 피부 트러블을 정밀하게 치료합니다.' },
+    { name: '아포지플러스', img: '/images/device/apogeePlus.png', tag: 'Laser Hair Removal', desc: '755nm 알렉산드라이트 레이저로 제모와 혈관 치료를 안전하고 효과적으로 진행합니다.' },
+    { name: 'LDM', img: '/images/device/ldm.png', tag: 'Ultrasound Skin Care', desc: '고밀도 초음파 진동으로 세포를 활성화하고 유효 성분을 진피 깊은 층까지 침투시키는 무자극 스킨케어 장비입니다.' },
+    { name: '오니코 레이저', img: '/images/device/onicoLaser.png', tag: 'Nail · Fungus', desc: '손·발톱 진균증(무좀)에 특화된 레이저로 항진균제 없이 균을 직접 제거합니다.' },
+    { name: '더마샤인 프로', img: '/images/device/dermashine.png', tag: 'Micro-needle · Hydration', desc: '음압 전동식 자동주사 방식으로 9개 미세 니들이 진피층에 주사제 성분을 균일하게 주입합니다.' },
+    { name: '마크뷰', img: '/images/device/markview.png', tag: 'Skin Analysis', desc: '피부 상태를 정밀하게 분석하는 진단 장비로 시술 전·후 피부 변화를 객관적으로 확인합니다.' },
+    { name: '리쥬메이트', img: '/images/device/rejumate.png', tag: 'Skin Booster', desc: '피부 재생과 수분 공급에 특화된 장비로 피부 탄력과 윤기를 효과적으로 개선합니다.' },
+    { name: '이온토손', img: '/images/device/iontoson.png', tag: 'Electroporation', desc: '이온토포레시스 기술로 유효 성분을 피부 깊은 층까지 침투시켜 피부 재생을 촉진합니다.' },
+    { name: '크라이오셀', img: '/images/device/cryocell.png', tag: 'Cryotherapy', desc: '냉각 에너지를 활용하여 지방세포를 감소시키고 피부 진정과 탄력 개선에 효과적입니다.' },
+    { name: '리포덤', img: '/images/device/lipoderm.png', tag: 'Body Contouring', desc: '지방 분해와 바디 윤곽 개선에 특화된 장비로 탄력 있는 바디 라인을 완성합니다.' },
   ];
 
   return (
@@ -253,7 +266,7 @@ export default function About() {
             </div>
           </motion.div>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-5">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-5">
             {DEVICES_T.map((device, i) => (
               <motion.div
                 key={i}
@@ -274,8 +287,7 @@ export default function About() {
                   <p className="text-[10px] font-semibold tracking-[0.15em] mb-2" style={{ color: BLUE }}>
                     {device.tag}
                   </p>
-                  <p className="text-[16px] font-black text-[#111] mb-2">{device.name}</p>
-                  <p className="text-[12px] text-gray-400 leading-[1.9]">{device.desc}</p>
+                  <p className="text-[16px] font-black text-[#111]">{device.name}</p>
                 </div>
               </motion.div>
             ))}

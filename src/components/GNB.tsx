@@ -56,6 +56,7 @@ const MOBILE_MENU: MobileMenuItem[] = [
           { label: '리쥬란 / 리쥬란HB+', to: '/rejuran' },
           { label: '리쥬란아이', to: '/rejuran-eye' },
           { label: '에버클', to: '/evercl' },
+          { label: '벨로테로 리바이브', to: '/belotero-revive' },
         ],
       },
       {
@@ -75,6 +76,7 @@ const MOBILE_MENU: MobileMenuItem[] = [
           { label: '노블린', to: '/nobelin' },
           { label: '미인레이저', to: '/miiin-laser' },
           { label: '에이톤레이저', to: '/aeton-laser' },
+          { label: 'CO2 레이저', to: '/co2-laser' },
         ],
       },
       {
@@ -83,21 +85,19 @@ const MOBILE_MENU: MobileMenuItem[] = [
           { label: 'IBPS 부스터필', to: '/ibps' },
           { label: '블랙필', to: '/blackpeel' },
           { label: '아쿠아필', to: '/aquapeel' },
-          { label: 'PDT', to: '/pdt' },
-          { label: '시크릿레이저', to: '/secret-laser' },
           { label: '초음파관리 (LDM)', to: '/ldm' },
           { label: '더마샤인', to: '/dermashine' },
           { label: 'NDA플러스', to: '/nda-plus' },
-          { label: '벨로테로 리바이브', to: '/belotero-revive' },
         ],
       },
       {
         title: '바디 · 제모',
         items: [
           { label: '아포지플러스', to: '/apogee-plus' },
-          { label: '빨간주사', to: '/red-injection' },
+          { label: '빨간주사, HPL', to: '/red-injection' },
           { label: '노블쉐이프', to: '/nobleshape' },
           { label: '오니코 레이저', to: '/onico-laser' },
+          { label: '카복시', to: '/carboxy' },
         ],
       },
     ],
@@ -160,7 +160,7 @@ export default function GNB({ open, onClose }: GNBProps) {
           {/* 상단 바 */}
           <div className="flex items-center justify-between px-6 h-[64px] border-b border-gray-100 sticky top-0 bg-white z-10">
             <Link to="/" onClick={handleClose} className="flex items-center">
-              <img src="/logo-1.png" alt="닥터제이앤미의원" className="h-[44px] w-auto" />
+              <img src="/logo-dark.png" alt="닥터제이앤미의원" className="h-[32px] w-auto" />
             </Link>
             <div className="flex items-center gap-3">
               <button

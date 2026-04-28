@@ -9,7 +9,7 @@ const FEATURES = [
   {
     num: '01',
     title: '전문의가\n직접 시술합니다',
-    desc: '상담부터 시술까지 피부과 전문의가\n직접 진행하여 안전하고 정확한 결과를 드립니다.',
+    desc: '상담부터 시술까지 전문의가\n직접 진행하여 안전하고 정확한 결과를 드립니다.',
     image: '/images/home6.png',
     bg: '/images/home2.png',
   },
@@ -40,7 +40,7 @@ const DOCTOR = {
   ],
   career: [
     '現 닥터제이앤미의원 대표원장',
-    '現 다시봄날의원 서창점 대표원장',
+    '前 다시봄날의원 서창점 대표원장',
     '경상북도 의성군 보건소 야간응급의료 전담의',
     '실전진료워크숍 강사',
     '前 더유스의원(구 WS라인의원) 부원장',
@@ -57,7 +57,7 @@ const DOCTOR = {
 const CLINIC_IMAGES = [
   { src: '/images/clinic/clinic1.png', w: 'w-[300px]' },
   { src: '/images/clinic/clinic3.jpg', w: 'w-[340px]' },
-  { src: '/images/clinic/clinic4.jpg', w: 'w-[280px]' },
+  { src: '/images/clinic/clinic4.png', w: 'w-[280px]' },
   { src: '/images/clinic/clinic5.png', w: 'w-[320px]' },
   { src: '/images/clinic/clinic6.png', w: 'w-[260px]' },
 ];
@@ -78,6 +78,14 @@ function Hero() {
 
       {/* 텍스트 */}
       <div className="relative z-10 text-center px-4 flex flex-col items-center">
+        <motion.img
+          src="/logo-symbol-light.png"
+          alt=""
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.1 }}
+          className="h-[72px] w-auto mb-8"
+        />
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}

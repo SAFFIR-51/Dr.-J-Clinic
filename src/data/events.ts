@@ -82,7 +82,7 @@ export const EVENTS: EventItem[] = [
         desc: '처음 방문하시는 고객분들께 전문의 피부 상담을 무료로 제공합니다.\n피부 상태 분석 후 가장 적합한 시술 방향을 안내드립니다.',
         note: '* 시술 예약과 무관하게 상담 자체는 무료로 진행됩니다',
       },
-      { type: 'image', src: '/images/clinic/clinic4.jpg' },
+      { type: 'image', src: '/images/clinic/clinic4.png' },
       {
         type: 'text',
         label: 'BONUS',

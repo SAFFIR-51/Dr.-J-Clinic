@@ -18,6 +18,7 @@ const ALL_CATEGORIES = [
       { label: '리쥬란 / 리쥬란HB+', to: '/rejuran' },
       { label: '리쥬란아이', to: '/rejuran-eye' },
       { label: '에버클', to: '/evercl' },
+      { label: '벨로테로 리바이브', to: '/belotero-revive' },
     ],
   },
   {
@@ -39,6 +40,7 @@ const ALL_CATEGORIES = [
       { label: '노블린', to: '/nobelin' },
       { label: '미인레이저', to: '/miiin-laser' },
       { label: '에이톤레이저', to: '/aeton-laser' },
+      { label: 'CO2 레이저', to: '/co2-laser' },
     ],
   },
   {
@@ -48,12 +50,9 @@ const ALL_CATEGORIES = [
       { label: 'IBPS 부스터필', to: '/ibps' },
       { label: '블랙필', to: '/blackpeel' },
       { label: '아쿠아필', to: '/aquapeel' },
-      { label: 'PDT', to: '/pdt' },
-      { label: '시크릿레이저', to: '/secret-laser' },
       { label: '초음파관리 (LDM)', to: '/ldm' },
       { label: '더마샤인', to: '/dermashine' },
       { label: 'NDA플러스', to: '/nda-plus' },
-      { label: '벨로테로 리바이브', to: '/belotero-revive' },
     ],
   },
   {
@@ -61,9 +60,10 @@ const ALL_CATEGORIES = [
     keys: ['바디 · 제모'],
     items: [
       { label: '아포지플러스', to: '/apogee-plus' },
-      { label: '빨간주사', to: '/red-injection' },
+      { label: '빨간주사, HPL', to: '/red-injection' },
       { label: '노블쉐이프', to: '/nobleshape' },
       { label: '오니코 레이저', to: '/onico-laser' },
+      { label: '카복시', to: '/carboxy' },
     ],
   },
 ];
@@ -408,7 +408,7 @@ export default function TreatmentPage({ data }: Props) {
               </h2>
             </motion.div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div className={`grid grid-cols-1 gap-4 ${data.whyReone.length === 3 ? 'sm:grid-cols-3' : 'sm:grid-cols-2'}`}>
               {data.whyReone.map((w, i) => (
                 <motion.div key={i} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }} transition={{ delay: i * 0.07 }}
@@ -651,7 +651,7 @@ export default function TreatmentPage({ data }: Props) {
               <h2 className="text-[26px] md:text-[32px] font-black text-[#111] tracking-tight">시술 과정</h2>
             </motion.div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
+            <div className={`grid grid-cols-1 gap-4 ${data.process!.length === 3 ? 'sm:grid-cols-3' : 'sm:grid-cols-2 md:grid-cols-4'}`}>
               {data.process.map((p, i) => (
                 <motion.div key={i} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }} transition={{ delay: i * 0.1 }}

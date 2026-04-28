@@ -1,16 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'motion/react';
-import { Tag, Clock, Sparkles } from 'lucide-react';
+import { Tag, Clock } from 'lucide-react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import ArcHero from '../components/ArcHero';
-import { ALWAYS, SPECIAL, SEASON, type TabKey, type NoticeEvent } from '../data/noticeEvents';
+import { ALWAYS, SEASON, type TabKey, type NoticeEvent } from '../data/noticeEvents';
 import { useLanguage } from '../contexts/LanguageContext';
 
 const TABS_BASE: { key: TabKey; labelKey: string; icon: React.ElementType; data: NoticeEvent[] }[] = [
-  { key: 'always',  labelKey: 'notice.tab.always',  icon: Tag,      data: ALWAYS  },
-  { key: 'special', labelKey: 'notice.tab.special', icon: Sparkles, data: SPECIAL },
-  { key: 'season',  labelKey: 'notice.tab.season',  icon: Clock,    data: SEASON  },
+  { key: 'always',  labelKey: 'notice.tab.always',  icon: Tag,   data: ALWAYS },
+  { key: 'season',  labelKey: 'notice.tab.season',  icon: Clock, data: SEASON },
 ];
 
 function EventCard({ item, index }: { item: NoticeEvent; index: number }) {
