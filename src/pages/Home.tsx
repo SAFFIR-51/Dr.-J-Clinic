@@ -67,75 +67,64 @@ const CLINIC_IMAGES = [
 function Hero() {
   const { t } = useLanguage();
   return (
-    <section className="relative h-screen flex items-center justify-center overflow-hidden">
-      <video
-        src="/videos/hero.mp4"
-        autoPlay muted loop playsInline
-        className="absolute inset-0 w-full h-full object-cover"
+    <section className="relative h-screen overflow-hidden flex md:items-center items-start">
+      {/* 데스크탑 배경 이미지 */}
+      <img
+        src="/images/hero-desktop.png"
+        alt=""
+        className="absolute inset-0 w-full h-full object-cover hidden md:block"
       />
-      {/* 오버레이 — 상단 약하게, 하단 강하게 */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-black/30 to-black/60" />
+      {/* 모바일 배경 이미지 */}
+      <img
+        src="/images/hero-mobile.png"
+        alt=""
+        className="absolute inset-0 w-full h-full object-cover block md:hidden"
+      />
 
-      {/* 텍스트 */}
-      <div className="relative z-10 text-center px-4 flex flex-col items-center">
-        <motion.img
-          src="/logo-symbol-light.png"
-          alt=""
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.1 }}
-          className="h-[72px] w-auto mb-8"
-        />
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="flex items-center gap-3 mb-8"
-        >
-          <span className="w-8 h-px bg-white/40" />
-          <span className="text-white/60 text-[11px] tracking-[0.4em] uppercase font-medium">
-            {t('home.hero.badge')}
-          </span>
-          <span className="w-8 h-px bg-white/40" />
-        </motion.div>
+      {/* 콘텐츠 — 데스크탑: 왼쪽, 모바일: 상단 */}
+      <div className="relative z-10 w-full max-w-6xl mx-auto px-8 md:px-16 pt-28 md:pt-0">
+        <div className="md:w-[46%] flex flex-col items-center md:items-start text-center md:text-left">
 
-        <motion.h1
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.4 }}
-          className="text-white leading-none mb-5"
-          style={{
-            fontFamily: '"Cormorant Garamond", Georgia, serif',
-            fontSize: 'clamp(52px, 8vw, 100px)',
-            fontWeight: 500,
-            letterSpacing: '-0.01em',
-            fontStyle: 'italic',
-          }}
-        >
-          Your Most<br />Beautiful Self
-        </motion.h1>
 
-        <motion.p
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 0.7 }}
-          className="text-white/60 text-[14px] tracking-[0.15em] mb-10"
-        >
-          {t('home.hero.subtitle')}
-        </motion.p>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="flex items-center gap-3 mb-7"
+          >
+            <span className="w-6 h-px bg-gray-400/50" />
+            <span className="text-gray-400 text-[11px] tracking-[0.4em] uppercase font-medium">
+              {t('home.hero.badge')}
+            </span>
+            <span className="w-6 h-px bg-gray-400/50" />
+          </motion.div>
 
-        <motion.a
-          href="https://pf.kakao.com/_YFJas"
-          target="_blank"
-          rel="noopener noreferrer"
-          initial={{ opacity: 0, y: 16 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.9 }}
-          className="group flex items-center gap-3 px-8 py-3.5 rounded-full text-[13px] font-medium text-white border border-white/30 backdrop-blur-sm hover:bg-white hover:text-[#111] transition-all duration-500"
-        >
-          {t('home.hero.cta')}
-          <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-        </motion.a>
+          <motion.h1
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 0.4 }}
+            className="text-[#111] leading-none mb-5"
+            style={{
+              fontFamily: '"Cormorant Garamond", Georgia, serif',
+              fontSize: 'clamp(44px, 6vw, 88px)',
+              fontWeight: 500,
+              letterSpacing: '-0.01em',
+              fontStyle: 'italic',
+            }}
+          >
+            Your Most<br />Beautiful Self
+          </motion.h1>
+
+          <motion.p
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1, delay: 0.7 }}
+            className="text-gray-400 text-[13px] tracking-[0.15em] mb-10"
+          >
+            {t('home.hero.subtitle')}
+          </motion.p>
+
+        </div>
       </div>
 
       {/* 스크롤 인디케이터 */}
@@ -145,11 +134,11 @@ function Hero() {
         transition={{ delay: 1.8 }}
         className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2"
       >
-        <span className="text-white/40 text-[9px] tracking-[0.5em] uppercase">Scroll</span>
+        <span className="text-gray-400 text-[9px] tracking-[0.5em] uppercase">Scroll</span>
         <motion.div
           animate={{ y: [0, 10, 0] }}
           transition={{ repeat: Infinity, duration: 2, ease: 'easeInOut' }}
-          className="w-px h-14 bg-gradient-to-b from-white/40 to-transparent"
+          className="w-px h-14 bg-gradient-to-b from-gray-400 to-transparent"
         />
       </motion.div>
     </section>

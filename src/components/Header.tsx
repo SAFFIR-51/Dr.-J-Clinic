@@ -4,7 +4,7 @@ import { ChevronDown } from 'lucide-react';
 import GNB from './GNB';
 import { useLanguage } from '../contexts/LanguageContext';
 
-const ALWAYS_DARK_PAGES = ['/about'];
+const ALWAYS_DARK_PAGES = ['/about', '/'];
 
 interface NavGroup {
   title: string | null;
