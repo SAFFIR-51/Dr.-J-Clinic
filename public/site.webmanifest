@@ -1,0 +1,12 @@
+{
+  "name": "닥터제이앤미의원",
+  "short_name": "닥터제이앤미",
+  "description": "인천 남동구 서창동 피부과 전문의원",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#6b9ab8",
+  "icons": [
+    { "src": "/logo-symbol-dark.png", "sizes": "any", "type": "image/png" }
+  ]
+}

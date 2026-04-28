@@ -17,8 +17,14 @@ const FALLBACK_URL =
 
 function loadScript(): Promise<void> {
   return new Promise((resolve, reject) => {
+    // 이미 로드 완료된 경우 즉시 resolve
+    if (window.naver?.maps) {
+      resolve();
+      return;
+    }
     const existing = document.querySelector('script[src*="oapi.map.naver.com"]');
     if (existing) {
+      // 스크립트는 있지만 아직 로드 중인 경우
       existing.addEventListener('load', () => resolve());
       existing.addEventListener('error', reject);
       return;
