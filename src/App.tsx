@@ -9,8 +9,6 @@ import Doctors from './pages/Doctors';
 import Location from './pages/Location';
 import Notice from './pages/Notice';
 import NoticeDetail from './pages/NoticeDetail';
-import Events from './pages/Events';
-import EventDetail from './pages/EventDetail';
 import Equipment from './pages/Equipment';
 import {
   SofwavePage, UltherapyPage, ThermagePage, TitaniumPage,
@@ -57,8 +55,6 @@ export default function App() {
           {/* 커뮤니티 */}
           <Route path="/notice" element={<Notice />} />
           <Route path="/notice/:id" element={<NoticeDetail />} />
-          <Route path="/events" element={<Events />} />
-          <Route path="/events/:id" element={<EventDetail />} />
 
           {/* 리프팅 · 탄력 */}
           <Route path="/sofwave" element={<SofwavePage />} />

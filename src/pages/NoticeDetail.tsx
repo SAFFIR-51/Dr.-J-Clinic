@@ -1,65 +1,76 @@
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { CalendarDays, ArrowLeft } from 'lucide-react';
+import { motion } from 'motion/react';
+import { ArrowLeft } from 'lucide-react';
+import ArcHero from '../components/ArcHero';
+import { useLanguage } from '../contexts/LanguageContext';
 import { ALL_EVENTS } from '../data/noticeEvents';
 
 export default function NoticeDetail() {
   const { id } = useParams<{ id: string }>();
+  const { t } = useLanguage();
   const event = ALL_EVENTS.find(e => e.id === Number(id)) ?? ALL_EVENTS[0];
 
   return (
-    <div className="min-h-screen bg-white pt-[64px]">
-      <div className="max-w-2xl mx-auto px-6 py-16">
+    <>
+      {/* 목록 페이지와 동일한 히어로 */}
+      <ArcHero
+        labelSmall={t('notice.hero.label')}
+        titleLarge={t('notice.hero.title')}
+        description={t('notice.hero.desc')}
+        bgImage="/images/hero-notice.png"
+        overlay
+        noArc
+      />
 
-        {/* 뒤로가기 */}
-        <Link
-          to="/notice"
-          className="inline-flex items-center gap-1.5 text-[12px] text-gray-400 hover:text-[#6b9ab8] transition-colors mb-10"
+      {/* 이벤트 제목 · 부제 */}
+      <section className="bg-white py-14 border-b border-gray-100">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="max-w-3xl mx-auto px-6 text-center"
         >
-          <ArrowLeft className="w-3.5 h-3.5" /> 목록으로
-        </Link>
-
-        {/* 헤더 */}
-        <div className="pb-6 border-b border-gray-200 mb-8">
-          <span className="inline-block px-3 py-1 bg-[#eef4f8] text-[#6b9ab8] text-[11px] font-bold rounded-full mb-4">
-            {event.badge}
-          </span>
-          <h1 className="text-[22px] md:text-[26px] font-black text-[#111] leading-tight mb-3" style={{ letterSpacing: '-0.02em' }}>
+          <p className="text-[11px] font-black tracking-[0.4em] text-[#6b9ab8] mb-4 uppercase">
+            {event.subtitle}
+          </p>
+          <h1
+            className="text-[#111] mb-4"
+            style={{ fontSize: 'clamp(26px, 4vw, 42px)', fontWeight: 900, letterSpacing: '-0.02em', lineHeight: 1.3 }}
+          >
             {event.title}
           </h1>
-          <div className="flex items-center gap-2 text-[12px] text-gray-400">
-            <CalendarDays className="w-3.5 h-3.5" />
-            {event.period}
-          </div>
-        </div>
+          <div className="w-8 h-[2px] bg-[#b4cfe4] mx-auto" />
+        </motion.div>
+      </section>
 
-        {/* 이미지 */}
-        {event.detailImage && (
-          <div className="mb-8 overflow-hidden rounded-xl">
-            <img
-              src={event.detailImage}
-              alt={event.title}
-              className="w-full object-cover"
+      {/* 내용 이미지 */}
+      <section className="bg-white py-14">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 flex flex-col gap-4">
+          {event.contentImages.map((src, i) => (
+            <motion.img
+              key={i}
+              src={src}
+              alt=""
+              initial={{ opacity: 0, y: 24 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: i * 0.1 }}
+              className="w-full h-auto block rounded-xl shadow-sm"
             />
-          </div>
-        )}
-
-        {/* 본문 */}
-        <div className="text-[14px] text-gray-600 leading-[2] whitespace-pre-line">
-          {event.detailText}
+          ))}
         </div>
+      </section>
 
-        {/* 구분선 */}
-        <div className="mt-16 pt-8 border-t border-gray-100">
-          <Link
-            to="/notice"
-            className="inline-flex items-center gap-2 text-[13px] font-bold text-[#6b9ab8] hover:text-[#111] transition-colors"
-          >
-            <ArrowLeft className="w-4 h-4" /> 이벤트 목록으로
-          </Link>
-        </div>
-
-      </div>
-    </div>
+      {/* 목록으로 */}
+      <section className="py-14 bg-[#f8f7f5] text-center border-t border-gray-100">
+        <Link
+          to="/notice"
+          className="inline-flex items-center gap-2 text-[13px] font-bold text-[#6b9ab8] hover:text-[#111] transition-colors"
+        >
+          <ArrowLeft className="w-4 h-4" /> 이벤트 목록으로
+        </Link>
+      </section>
+    </>
   );
 }

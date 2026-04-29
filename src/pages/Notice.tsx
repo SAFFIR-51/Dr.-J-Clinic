@@ -8,8 +8,8 @@ import { ALWAYS, SEASON, type TabKey, type NoticeEvent } from '../data/noticeEve
 import { useLanguage } from '../contexts/LanguageContext';
 
 const TABS_BASE: { key: TabKey; labelKey: string; icon: React.ElementType; data: NoticeEvent[] }[] = [
-  { key: 'always',  labelKey: 'notice.tab.always',  icon: Tag,   data: ALWAYS },
-  { key: 'season',  labelKey: 'notice.tab.season',  icon: Clock, data: SEASON },
+  { key: 'always', labelKey: 'notice.tab.always', icon: Tag,   data: ALWAYS },
+  { key: 'season', labelKey: 'notice.tab.season', icon: Clock, data: SEASON },
 ];
 
 function EventCard({ item, index }: { item: NoticeEvent; index: number }) {
@@ -19,30 +19,18 @@ function EventCard({ item, index }: { item: NoticeEvent; index: number }) {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, delay: index * 0.07 }}
     >
-      <Link to={`/notice/${item.id}`} className="group block bg-white overflow-hidden flex flex-col" style={{ borderRadius: 4 }}>
-        {/* 이미지 */}
-        <div className="relative overflow-hidden bg-[#f5f3ef]" style={{ aspectRatio: '4/3' }}>
-          <img
-            src={item.image}
-            alt={item.title}
-            className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-700 p-6"
-          />
-          {item.hot && (
-            <span className="absolute top-3 left-3 px-2.5 py-1 bg-[#6b9ab8] text-white text-[10px] font-black rounded-full tracking-widest">HOT</span>
-          )}
-        </div>
-
-        {/* 텍스트 */}
-        <div className="flex flex-col flex-1 p-6 border border-t-0 border-gray-100">
-          <span className="text-[11px] text-gray-400 mb-3">{item.period}</span>
-          <h3 className="text-[17px] font-bold text-[#111] mb-1.5 leading-tight group-hover:text-[#6b9ab8] transition-colors" style={{ letterSpacing: '-0.02em' }}>
+      <Link to={`/notice/${item.id}`} className="group relative block overflow-hidden rounded-xl aspect-square bg-gray-100">
+        <img
+          src={item.thumbnail}
+          alt={item.title}
+          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+        />
+        {/* 호버 오버레이 */}
+        <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center text-center px-4">
+          <p className="text-[10px] font-bold tracking-[0.3em] text-[#b4cfe4] mb-2 uppercase">{item.subtitle}</p>
+          <h3 className="text-white font-black leading-tight" style={{ fontSize: 'clamp(14px, 2vw, 20px)', letterSpacing: '-0.02em' }}>
             {item.title}
           </h3>
-          <p className="text-[13px] text-gray-400 mb-3 font-medium">{item.subtitle}</p>
-          <p className="text-[13px] text-gray-500 leading-[1.8] flex-1">{item.desc}</p>
-          <div className="mt-5 text-[12px] font-bold text-[#6b9ab8] flex items-center gap-1.5 opacity-0 group-hover:opacity-100 transition-opacity">
-            자세히 보기 →
-          </div>
         </div>
       </Link>
     </motion.div>
@@ -110,7 +98,7 @@ export default function Notice() {
 
       {/* 그리드 */}
       <section className="py-20 bg-[#fafaf9] min-h-[60vh]">
-        <div className="max-w-6xl mx-auto px-6">
+        <div className="max-w-4xl mx-auto px-6">
           <AnimatePresence mode="wait">
             <motion.div
               key={activeTab}
@@ -118,7 +106,7 @@ export default function Notice() {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               transition={{ duration: 0.25 }}
-              className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
+              className="grid grid-cols-2 sm:grid-cols-3 gap-4"
             >
               {currentTab.data.map((item, i) => (
                 <EventCard key={item.id} item={item} index={i} />
