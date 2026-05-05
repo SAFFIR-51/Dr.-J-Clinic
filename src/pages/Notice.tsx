@@ -27,7 +27,6 @@ function EventCard({ item, index }: { item: NoticeEvent; index: number }) {
         />
         {/* 호버 오버레이 */}
         <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center text-center px-4">
-          <p className="text-[10px] font-bold tracking-[0.3em] text-[#b4cfe4] mb-2 uppercase">{item.subtitle}</p>
           <h3 className="text-white font-black leading-tight" style={{ fontSize: 'clamp(14px, 2vw, 20px)', letterSpacing: '-0.02em' }}>
             {item.title}
           </h3>

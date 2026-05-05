@@ -23,27 +23,6 @@ export default function NoticeDetail() {
         noArc
       />
 
-      {/* 이벤트 제목 · 부제 */}
-      <section className="bg-white py-14 border-b border-gray-100">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="max-w-3xl mx-auto px-6 text-center"
-        >
-          <p className="text-[11px] font-black tracking-[0.4em] text-[#6b9ab8] mb-4 uppercase">
-            {event.subtitle}
-          </p>
-          <h1
-            className="text-[#111] mb-4"
-            style={{ fontSize: 'clamp(26px, 4vw, 42px)', fontWeight: 900, letterSpacing: '-0.02em', lineHeight: 1.3 }}
-          >
-            {event.title}
-          </h1>
-          <div className="w-8 h-[2px] bg-[#b4cfe4] mx-auto" />
-        </motion.div>
-      </section>
-
       {/* 내용 이미지 */}
       <section className="bg-white py-14">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 flex flex-col gap-4">

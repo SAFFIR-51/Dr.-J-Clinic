@@ -4,42 +4,37 @@ export interface NoticeEvent {
   id: number;
   tab: TabKey;
   title: string;
-  subtitle: string;
   thumbnail: string;
   contentImages: string[];
 }
 
 export const ALWAYS: NoticeEvent[] = [
   {
-    id: 2, tab: 'always',
-    title: '프리미엄 패키지',
-    subtitle: 'Premium Package',
-    thumbnail: '/이벤트/2.png',
-    contentImages: ['/이벤트/2.1.png'],
-  },
-  {
-    id: 3, tab: 'always',
-    title: '베스트 스킨부스터',
-    subtitle: 'Best Skin Booster',
-    thumbnail: '/이벤트/3.png',
-    contentImages: ['/이벤트/3.1.png'],
+    id: 1, tab: 'always',
+    title: '고객맞춤 상시혜택 프로그램',
+    thumbnail: '/이벤트/1.png',
+    contentImages: ['/이벤트/1.1.png', '/이벤트/1.2.png'],
   },
   {
     id: 4, tab: 'always',
-    title: '피부질환 보험진료',
-    subtitle: 'Insurance Treatment',
+    title: '닥터제이앤미의원 이벤트',
     thumbnail: '/이벤트/4.png',
-    contentImages: ['/이벤트/4.1.png'],
+    contentImages: ['/이벤트/4.1.png', '/이벤트/4.2.png', '/이벤트/4.3.png'],
+  },
+  {
+    id: 2, tab: 'always',
+    title: '제증명 수수료 · 비급여 치료 금액안내',
+    thumbnail: '/이벤트/2.png',
+    contentImages: ['/이벤트/2.1.png'],
   },
 ];
 
 export const SEASON: NoticeEvent[] = [
   {
-    id: 1, tab: 'season',
-    title: '5월 설렘, 봄 이벤트',
-    subtitle: 'Spring Special Event',
-    thumbnail: '/이벤트/1.png',
-    contentImages: ['/이벤트/1.1.png', '/이벤트/1.2.png'],
+    id: 3, tab: 'season',
+    title: '평일 이벤트',
+    thumbnail: '/이벤트/3.png',
+    contentImages: ['/이벤트/3.1.png'],
   },
 ];
 
