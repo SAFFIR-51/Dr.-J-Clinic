@@ -16,19 +16,25 @@ export const ALWAYS: NoticeEvent[] = [
     contentImages: ['/이벤트/1.1.png', '/이벤트/1.2.png', '/이벤트/1.3.png'],
   },
   {
-    id: 3, tab: 'always',
-    title: '평일 이벤트',
-    thumbnail: '/이벤트/3.png',
-    contentImages: ['/이벤트/3.1.png'],
+    id: 2, tab: 'always',
+    title: '제증명 수수료 · 비급여 치료 금액안내',
+    thumbnail: '/이벤트/2.png',
+    contentImages: ['/이벤트/2.1.png'],
   },
 ];
 
 export const SEASON: NoticeEvent[] = [
   {
-    id: 2, tab: 'season',
-    title: '제증명 수수료 · 비급여 치료 금액안내',
-    thumbnail: '/이벤트/2.png',
-    contentImages: ['/이벤트/2.1.png'],
+    id: 3, tab: 'season',
+    title: '평일 이벤트',
+    thumbnail: '/이벤트/3.png',
+    contentImages: ['/이벤트/3.1.png'],
+  },
+  {
+    id: 4, tab: 'season',
+    title: '시즌 이벤트',
+    thumbnail: '/이벤트/4.png',
+    contentImages: ['/이벤트/4.1.png', '/이벤트/4.2.png', '/이벤트/4.3.png'],
   },
 ];
 

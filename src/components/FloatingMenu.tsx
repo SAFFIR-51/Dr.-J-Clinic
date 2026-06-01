@@ -38,7 +38,7 @@ const LINKS = [
   {
     icon: Instagram,
     label: '인스타그램',
-    href: 'https://www.instagram.com/springday.jw?igsh=MTlheGhmcnB4a3owbw%3D%3D',
+    href: 'https://www.instagram.com/drjandme',
     color: '#E1306C',
     textColor: '#fff',
     external: true,
