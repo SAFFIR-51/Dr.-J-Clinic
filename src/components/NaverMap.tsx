@@ -11,9 +11,9 @@ const LAT = 37.4262867;
 const LNG = 126.7480493;
 const CLIENT_ID = 'lsh4eg05nz';
 
-// 인증 실패 또는 스크립트 오류 시 보여줄 iframe (Naver Maps 검색 임베드)
+// 인증 실패 또는 스크립트 오류 시 보여줄 iframe (Naver Place 임베드)
 const FALLBACK_URL =
-  `https://map.naver.com/p/search/다시봄날의원 서창점?c=${LNG},${LAT},17,0,0,0,dh`;
+  `https://map.naver.com/p/entry/place/2086665902?c=${LNG},${LAT},17,0,0,0,dh`;
 
 function loadScript(): Promise<void> {
   return new Promise((resolve, reject) => {

@@ -30,7 +30,7 @@ const LINKS = [
   {
     icon: Calendar,
     label: '네이버예약',
-    href: 'https://naver.me/FmfL7fiJ',
+    href: 'https://map.naver.com/p/entry/place/2086665902',
     color: '#03C75A',
     textColor: '#fff',
     external: true,

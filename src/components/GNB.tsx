@@ -115,7 +115,7 @@ const MOBILE_MENU: MobileMenuItem[] = [
         title: null,
         items: [
           { label: '카카오채널', to: 'https://pf.kakao.com/_YFJas', external: true },
-          { label: '네이버 예약', to: 'https://naver.me/FmfL7fiJ', external: true },
+          { label: '네이버 예약', to: 'https://map.naver.com/p/entry/place/2086665902', external: true },
           { label: '전화문의', to: 'tel:0327248724', external: true },
         ],
       },
@@ -289,7 +289,7 @@ export default function GNB({ open, onClose }: GNBProps) {
                 {t('gnb.kakao')}
               </a>
               <a
-                href="https://naver.me/FmfL7fiJ"
+                href="https://map.naver.com/p/entry/place/2086665902"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center justify-center py-3 bg-[#03C75A] text-white text-[13px] font-bold rounded-full hover:bg-[#02b34e] transition-all"
