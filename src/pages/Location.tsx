@@ -56,7 +56,7 @@ export default function Location() {
           className="relative w-full"
           style={{ height: '60vh', minHeight: 400 }}
         >
-          <NaverMap variant="embed" />
+          <NaverMap />
           {/* 주소 오버레이 */}
           <div className="absolute bottom-6 left-6 z-10">
             <div className="bg-white/96 backdrop-blur-sm px-5 py-4 rounded-2xl shadow-xl">
