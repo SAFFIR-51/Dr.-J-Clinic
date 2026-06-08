@@ -30,7 +30,7 @@ const LINKS = [
   {
     icon: Calendar,
     label: '네이버예약',
-    href: 'https://map.naver.com/p/entry/place/2086665902/booking',
+    href: 'https://map.naver.com/p/entry/place/2086665902?placePath=/home?entry=pll&from=nx&fromNxList=true&from=map&fromPanelNum=1&additionalHeight=76&timestamp=202606080949&locale=ko&svcName=map_pcv5&placeSearchOption=entry%3Dpll%26fromNxList%3Dtrue&searchType=place&c=15.00,0,0,0,dh',
     color: '#03C75A',
     textColor: '#fff',
     external: true,

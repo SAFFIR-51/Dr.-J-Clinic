@@ -196,7 +196,7 @@ export default function Location() {
                 className="mt-8 flex flex-col sm:flex-row gap-3"
               >
                 <a
-                  href="https://map.naver.com/p/entry/place/2086665902/booking"
+                  href="https://map.naver.com/p/entry/place/2086665902?placePath=/home?entry=pll&from=nx&fromNxList=true&from=map&fromPanelNum=1&additionalHeight=76&timestamp=202606080949&locale=ko&svcName=map_pcv5&placeSearchOption=entry%3Dpll%26fromNxList%3Dtrue&searchType=place&c=15.00,0,0,0,dh"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 px-7 py-3.5 bg-[#6b9ab8] text-white text-[13px] font-bold rounded-full hover:bg-[#5a89a7] transition-colors"

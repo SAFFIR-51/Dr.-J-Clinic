@@ -36,7 +36,7 @@ export default function ContactSection() {
 
             <div className="flex flex-col sm:flex-row gap-3">
               <a
-                href="https://map.naver.com/p/entry/place/2086665902/booking"
+                href="https://map.naver.com/p/entry/place/2086665902?placePath=/home?entry=pll&from=nx&fromNxList=true&from=map&fromPanelNum=1&additionalHeight=76&timestamp=202606080949&locale=ko&svcName=map_pcv5&placeSearchOption=entry%3Dpll%26fromNxList%3Dtrue&searchType=place&c=15.00,0,0,0,dh"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center justify-center gap-2 flex-1 px-4 py-3 bg-[#b4cfe4] text-white text-[13px] font-bold rounded-lg hover:bg-black transition-colors duration-400 group"

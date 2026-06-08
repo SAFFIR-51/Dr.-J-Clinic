@@ -293,7 +293,7 @@ export default function Header() {
           <div className="flex items-center gap-3">
             {/* 예약 / 상담 버튼 - 데스크탑만 */}
             <a
-              href="https://map.naver.com/p/entry/place/2086665902/booking"
+              href="https://map.naver.com/p/entry/place/2086665902?placePath=/home?entry=pll&from=nx&fromNxList=true&from=map&fromPanelNum=1&additionalHeight=76&timestamp=202606080949&locale=ko&svcName=map_pcv5&placeSearchOption=entry%3Dpll%26fromNxList%3Dtrue&searchType=place&c=15.00,0,0,0,dh"
               target="_blank"
               rel="noopener noreferrer"
               className={`hidden md:inline-flex items-center px-5 py-2 text-[13px] font-semibold tracking-wide rounded-full border transition-all duration-300 ${
