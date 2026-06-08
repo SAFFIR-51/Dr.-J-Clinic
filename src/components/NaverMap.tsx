@@ -11,20 +11,24 @@ const LAT = 37.4262867;
 const LNG = 126.7480493;
 const CLIENT_ID = 'lsh4eg05nz';
 
-// 인증 실패 또는 스크립트 오류 시 보여줄 iframe (Naver Place 임베드)
-const FALLBACK_URL =
+// Place 패널 포함 iframe (큰 뷰 - Location 페이지용)
+const EMBED_URL =
   `https://map.naver.com/p/entry/place/2086665902?c=${LNG},${LAT},17,0,0,0,dh`;
+
+type Variant = 'embed' | 'api';
+
+interface NaverMapProps {
+  variant?: Variant;
+}
 
 function loadScript(): Promise<void> {
   return new Promise((resolve, reject) => {
-    // 이미 로드 완료된 경우 즉시 resolve
     if (window.naver?.maps) {
       resolve();
       return;
     }
     const existing = document.querySelector('script[src*="oapi.map.naver.com"]');
     if (existing) {
-      // 스크립트는 있지만 아직 로드 중인 경우
       existing.addEventListener('load', () => resolve());
       existing.addEventListener('error', reject);
       return;
@@ -37,23 +41,23 @@ function loadScript(): Promise<void> {
   });
 }
 
-export default function NaverMap() {
+export default function NaverMap({ variant = 'api' }: NaverMapProps) {
   const containerRef = useRef<HTMLDivElement>(null);
-  const [useFallback, setUseFallback] = useState(false);
+  const [authFailed, setAuthFailed] = useState(false);
 
   useEffect(() => {
+    if (variant !== 'api') return;
     let cancelled = false;
 
     window.navermap_authFailure = () => {
-      if (!cancelled) setUseFallback(true);
+      if (!cancelled) setAuthFailed(true);
     };
 
     loadScript()
       .then(() => {
         if (cancelled) return;
-        // 인증 실패 시 naver.maps 는 null
         if (!window.naver?.maps?.LatLng) {
-          setUseFallback(true);
+          setAuthFailed(true);
           return;
         }
         if (!containerRef.current) return;
@@ -86,20 +90,46 @@ export default function NaverMap() {
         });
       })
       .catch(() => {
-        if (!cancelled) setUseFallback(true);
+        if (!cancelled) setAuthFailed(true);
       });
 
     return () => { cancelled = true; };
-  }, []);
+  }, [variant]);
 
-  if (useFallback) {
+  // embed: 항상 iframe (Location 페이지 - 좌측 플레이스 패널 포함)
+  if (variant === 'embed') {
     return (
       <iframe
-        src={FALLBACK_URL}
+        src={EMBED_URL}
         style={{ width: '100%', height: '100%', border: 'none' }}
         title="닥터제이앤미의원 지도"
         allowFullScreen
       />
+    );
+  }
+
+  // api: 인증 실패 시 iframe fallback 없이 "네이버 지도에서 보기" 링크만
+  if (authFailed) {
+    return (
+      <a
+        href={EMBED_URL}
+        target="_blank"
+        rel="noopener noreferrer"
+        style={{
+          display: 'flex',
+          width: '100%',
+          height: '100%',
+          alignItems: 'center',
+          justifyContent: 'center',
+          background: '#f5f7fa',
+          color: '#6b9ab8',
+          fontSize: 13,
+          fontWeight: 600,
+          textDecoration: 'none',
+        }}
+      >
+        네이버 지도에서 보기 →
+      </a>
     );
   }
 
