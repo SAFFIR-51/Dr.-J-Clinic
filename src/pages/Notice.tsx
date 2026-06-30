@@ -107,7 +107,7 @@ export default function Notice() {
               transition={{ duration: 0.25 }}
               className="grid grid-cols-2 sm:grid-cols-3 gap-4"
             >
-              {currentTab.data.map((item, i) => (
+              {currentTab.data.filter((item) => !item.hidden).map((item, i) => (
                 <EventCard key={item.id} item={item} index={i} />
               ))}
             </motion.div>
