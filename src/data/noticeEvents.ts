@@ -45,10 +45,10 @@ export const SEASON: NoticeEvent[] = [
     contentImages: ['/이벤트/5.1.jpg'],
   },
   {
-    id: 6, tab: 'season',
-    title: '여름철 퀵 케어 패키지',
-    thumbnail: '/이벤트/6.png',
-    contentImages: ['/이벤트/6.1.jpg'],
+    id: 7, tab: 'season',
+    title: '가을맞이 피부 이벤트',
+    thumbnail: '/이벤트/7.png',
+    contentImages: ['/이벤트/7.1.png'],
   },
 ];
 
