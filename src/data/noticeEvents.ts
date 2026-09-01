@@ -39,12 +39,6 @@ export const SEASON: NoticeEvent[] = [
     contentImages: ['/이벤트/4.1.png', '/이벤트/4.2.png', '/이벤트/4.3.png'],
   },
   {
-    id: 5, tab: 'season',
-    title: '탄력·미백 이벤트',
-    thumbnail: '/이벤트/5.png',
-    contentImages: ['/이벤트/5.1.jpg'],
-  },
-  {
     id: 7, tab: 'season',
     title: '가을맞이 피부 이벤트',
     thumbnail: '/이벤트/7.png',
