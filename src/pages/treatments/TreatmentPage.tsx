@@ -25,10 +25,10 @@ const ALL_CATEGORIES = [
     label: '리프팅',
     keys: ['리프팅'],
     items: [
+      { label: '울쎄라피프라임', to: '/ultherapy-prime' },
       { label: '슈링크', to: '/shrink' },
       { label: '인모드', to: '/inmode' },
       { label: '올리지오', to: '/olligio' },
-      { label: '더블로골드', to: '/doublo-gold' },
     ],
   },
   {

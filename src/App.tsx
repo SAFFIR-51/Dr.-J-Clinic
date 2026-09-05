@@ -18,7 +18,7 @@ import {
   // 쁘띠성형
   FillerPage, HyaicoPage, HalowavePage, JuvelookPage, RejuranPage, RejuranEyePage, EverclPage,
   // 리프팅
-  ShrinkPage, InmodePage, OllagioPage, DoubloGoldPage,
+  UltherapyPrimePage, ShrinkPage, InmodePage, OllagioPage,
   // 색소
   PicosurePage, SecretDurePage, NobelinPage, MiinLaserPage, AetonLaserPage, Co2LaserPage,
   // 스킨케어
@@ -89,10 +89,10 @@ export default function App() {
           <Route path="/evercl" element={<EverclPage />} />
 
           {/* 리프팅 */}
+          <Route path="/ultherapy-prime" element={<UltherapyPrimePage />} />
           <Route path="/shrink" element={<ShrinkPage />} />
           <Route path="/inmode" element={<InmodePage />} />
           <Route path="/olligio" element={<OllagioPage />} />
-          <Route path="/doublo-gold" element={<DoubloGoldPage />} />
 
           {/* 색소 */}
           <Route path="/picosure" element={<PicosurePage />} />

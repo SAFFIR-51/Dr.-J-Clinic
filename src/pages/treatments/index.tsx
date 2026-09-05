@@ -27,10 +27,10 @@ export const RejuranPage = () => <TreatmentPage data={T2.rejuran} />;
 export const RejuranEyePage = () => <TreatmentPage data={T2.rejuranEye} />;
 export const EverclPage = () => <TreatmentPage data={T2.evercl} />;
 
+export const UltherapyPrimePage = () => <TreatmentPage data={T2.ultherapyPrime} />;
 export const ShrinkPage = () => <TreatmentPage data={T2.shrink} />;
 export const InmodePage = () => <TreatmentPage data={T2.inmode} />;
 export const OllagioPage = () => <TreatmentPage data={T2.ollagio} />;
-export const DoubloGoldPage = () => <TreatmentPage data={T2.doubloGold} />;
 
 export const PicosurePage = () => <TreatmentPage data={T2.picosure} />;
 export const SecretDurePage = () => <TreatmentPage data={T2.secretDure} />;

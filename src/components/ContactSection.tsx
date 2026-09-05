@@ -1,5 +1,5 @@
 import React from 'react';
-import NaverMap from './NaverMap';
+import GoogleMap from './GoogleMap';
 import { motion } from 'motion/react';
 import { ArrowRight } from 'lucide-react';
 
@@ -15,7 +15,7 @@ export default function ContactSection() {
             viewport={{ once: true }}
             className="rounded-2xl overflow-hidden aspect-[4/3] relative"
           >
-            <NaverMap />
+            <GoogleMap />
           </motion.div>
 
           {/* 정보 */}

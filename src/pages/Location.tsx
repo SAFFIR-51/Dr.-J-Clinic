@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'motion/react';
 import { MapPin, Phone, Car, Bus, TrainFront, Clock, ArrowRight } from 'lucide-react';
 import ArcHero from '../components/ArcHero';
-import NaverMap from '../components/NaverMap';
+import GoogleMap from '../components/GoogleMap';
 import { useLanguage } from '../contexts/LanguageContext';
 
 const HOURS_TIMES = [
@@ -56,7 +56,7 @@ export default function Location() {
           className="relative w-full"
           style={{ height: '60vh', minHeight: 400 }}
         >
-          <NaverMap />
+          <GoogleMap />
           {/* 주소 오버레이 */}
           <div className="absolute bottom-6 left-6 z-10">
             <div className="bg-white/96 backdrop-blur-sm px-5 py-4 rounded-2xl shadow-xl">

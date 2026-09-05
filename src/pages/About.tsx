@@ -27,9 +27,9 @@ export default function About() {
 
   const DEVICES_T = [
     { name: '피코슈어', img: '/images/device/picosure.png', tag: 'Pigmentation · Rejuvenation', desc: t('about.device.picosure') || '미국 FDA 승인 피코초 레이저. 기존 레이저 대비 압도적으로 짧은 조사 시간으로 색소·잡티·모공을 정밀하게 개선합니다.' },
+    { name: '울쎄라피 프라임', img: '/images/device/ultherapyPrime.png', tag: 'DeepSEE™ HIFU', desc: t('about.device.ultherapyPrime') || 'FDA 승인 DeepSEE™ 실시간 영상 기술로 피부 속을 직접 확인하며 진피·SMAS층까지 정교하게 리프팅합니다.' },
     { name: '슈링크 유니버스', img: '/images/device/shrink.png', tag: 'HIFU Lifting', desc: t('about.device.shrink') || '집속형 초음파(HIFU)로 피부 깊은 층 SMAS까지 에너지를 전달해 자연스러운 리프팅과 탄력을 회복시킵니다.' },
     { name: '인모드', img: '/images/device/inmode.png', tag: 'RF · Body Contouring', desc: t('about.device.inmode') || '차세대 라디오주파수 장비로 얼굴 리프팅부터 바디 윤곽까지. 열에너지로 콜라겐 생성을 촉진합니다.' },
-    { name: '더블로골드', img: '/images/device/doubloGold.png', tag: 'Dual HIFU', desc: t('about.device.doublo') || '이중 초음파로 피부 표면과 심부층을 동시에 케어. 탁월한 리프팅 효과와 높은 안전성으로 검증된 장비입니다.' },
     { name: '올리지오', img: '/images/device/ollagio.png', tag: 'RF Skin Tightening', desc: t('about.device.olligio') || '25개 핀을 통한 균일한 RF 에너지 전달로 통증은 최소화하고 피부 탄력 개선 효과는 극대화합니다.' },
     { name: '노블쉐이프', img: '/images/device/nobleshape.png', tag: 'Body · Fat Reduction', desc: t('about.device.nobleshape') || '고강도 집속 초음파로 지방세포를 직접 파괴하고 근육을 강화. 탄탄한 바디 라인을 설계합니다.' },
     { name: '미인레이저', img: '/images/device/miinLaser.png', tag: 'Pigmentation · Toning', desc: '1064nm Nd:YAG 토닝 레이저로 기미·색소침착을 균일하게 개선하고 전체적인 피부 톤을 밝혀줍니다.' },

@@ -21,10 +21,10 @@
 │   │   └── 에버클 → /evercl
 │   │
 │   ├── 리프팅
+│   │   ├── 울쎄라피프라임 → /ultherapy-prime
 │   │   ├── 슈링크 → /shrink
 │   │   ├── 인모드 → /inmode
-│   │   ├── 올리지오 → /olligio
-│   │   └── 더블로골드 → /doublo-gold
+│   │   └── 올리지오 → /olligio
 │   │
 │   ├── 색소·레이저
 │   │   ├── 피코슈어 → /picosure

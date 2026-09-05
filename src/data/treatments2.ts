@@ -361,6 +361,64 @@ export const evercl: TreatmentData = {
 };
 
 // ── 리프팅 ──────────────────────────────────────────────────────────────
+export const ultherapyPrime: TreatmentData = {
+  category: 'Lifting', breadcrumbCategory: '리프팅',
+  en: 'Ultherapy Prime', ko: '울쎄라피 프라임',
+  tagline: '볼수록 강한 초음파 리프팅',
+  subtitle: 'DeepSEE™ 실시간 영상으로 정교하게 시술하는 FDA 승인 초음파 리프팅',
+  heroImage: '/images/hero/ultherapyPrime.png',
+  deviceImage: '/images/device/ultherapyPrime.png',
+  bannerImage: '/images/banner/ultherapyPrime.png',
+  intro: '닥터제이앤미의원은 정품 울쎄라피 프라임을 새롭게 도입하여 한층 더 정교한 초음파 리프팅을 선보입니다.\n울쎄라피 프라임은 DeepSEE™ 기술로 실시간 피부 속을 들여다보며 정교하게 시술하는 집속형초음파자극시스템입니다.\nFDA 승인을 받은 마이크로포커스 초음파(MFU-V)로 일정하고 균일한 에너지를 진피층과 SMAS층까지 전달하여 처진 피부를 탄력 있게 개선합니다.',
+  badges: ['FDA 승인', 'DeepSEE™ 실시간 영상', 'MFU-V 초음파', '부위별 전용 트랜스듀서', '비침습·즉시 일상복귀'],
+  themeColor: '#b87090', themeColorEnd: '#9a5a78',
+  concept: 'DeepSEE HIFU',
+  features: ['DeepSEE™ 실시간 영상', '1.5·3.0·4.5mm 다중 깊이', '진피·SMAS층 타깃', '부위별 전용 트랜스듀서', '균일한 에너지 전달', '비침습 시술', '즉시 일상복귀'],
+  areas: ['눈썹', '이마·미간', '볼', '턱선', '목', '데콜테(가슴 윗부분)'],
+  points: [
+    { title: 'DeepSEE™ 실시간 영상 기술', desc: '시술 전 실시간 초음파 영상으로 피부 속 진피층과 SMAS층의 구조·깊이를 직접 확인한 뒤 정확한 위치에만 에너지를 전달하여 정교하고 안전한 리프팅이 가능합니다.' },
+    { title: '시각화된 MFU-V 초음파', desc: '기존 초음파 대비 한층 발전된 마이크로포커스 초음파(MFU-V)가 흔들림 없이 일정하고 균일한 에너지를 전달하여 예측 가능한 리프팅 결과를 제공합니다.' },
+    { title: '1.5·3.0·4.5mm 다중 깊이 타깃', desc: '깊이별 전용 카트리지로 진피 상층부터 근막(SMAS)층까지 단계적으로 초음파를 조사하여 표면 탄력과 깊은 층 리프팅을 함께 유도합니다.' },
+    { title: '부위별 전용 트랜스듀서', desc: '눈썹·얼굴 등 예민한 부위와 목·데콜테처럼 넓은 부위에 각각 최적화된 전용 팁을 사용하여 부위마다 섬세하고 균일한 시술을 제공합니다.' },
+    { title: '비침습·빠른 일상복귀', desc: '메스나 주사 없이 진행되는 비침습적 시술로 별도의 다운타임 없이 시술 직후 바로 일상생활로 복귀할 수 있습니다.' },
+  ],
+  benefits: ['눈썹 리프팅', '이마·미간 탄력', '턱선·V라인 개선', '목주름 개선', '데콜테 주름 개선', 'SMAS층 콜라겐 재생'],
+  recommendFor: [
+    '처진 눈썹과 흐려진 턱선 개선을 원하시는 분',
+    '목·데콜테(가슴 윗부분) 주름이 고민이신 분',
+    '칼 없이 자연스러운 리프팅 효과를 원하시는 분',
+    '정교하고 안전성이 검증된 초음파 리프팅을 찾으시는 분',
+  ],
+  whyReone: [
+    { title: '전문의 직접 시술', desc: '전문의가 DeepSEE™ 영상으로 피부 깊이와 SMAS층 위치를 직접 확인하며 처음부터 끝까지 시술합니다.' },
+    { title: '정품 장비·정품 팁 사용', desc: '정품 울쎄라피 프라임 장비와 부위별 정품 카트리지만을 사용하며, 시술 전 미개봉 상태를 직접 확인시켜 드립니다.' },
+    { title: '개인 맞춤 에너지 설계', desc: '피부 두께와 처짐 정도, 고민 부위를 분석하여 카트리지 깊이·샷 수·에너지 강도를 개인별로 세밀하게 조정합니다.' },
+    { title: '복합 리프팅 설계', desc: '필요에 따라 슈링크, 인모드 등 보유 중인 다른 리프팅 장비와 결합하여 한층 입체적인 결과를 설계합니다.' },
+  ],
+  areaDetails: [
+    { title: '눈썹 리프팅', desc: '처진 눈썹 라인에 집속 초음파를 조사하여 눈매를 끌어올리고 또렷하고 생기 있는 인상을 만들어드립니다.', image: 'https://picsum.photos/seed/ultherapyprime-brow/200/200' },
+    { title: '이마·미간 리프팅', desc: '이마의 가로 주름과 미간의 처짐에 에너지를 전달하여 콜라겐 재생을 촉진하고 매끈한 이마 라인을 회복합니다.', image: 'https://picsum.photos/seed/ultherapyprime-forehead/200/200' },
+    { title: '볼 탄력 개선', desc: '처지기 시작한 볼 조직에 다중 깊이 초음파를 조사하여 팔자주름을 완화하고 볼 전체의 탄력을 끌어올립니다.', image: 'https://picsum.photos/seed/ultherapyprime-cheek/200/200' },
+    { title: '턱선·V라인', desc: '흐려진 턱선에 초음파 에너지를 조사하여 SMAS층을 수축시키고 선명하고 갸름한 V라인을 만들어냅니다.', image: 'https://picsum.photos/seed/ultherapyprime-jaw/200/200' },
+    { title: '목 주름·목선', desc: '목의 가로 주름과 피부 처짐에 울쎄라피 프라임을 적용하여 탄력 있는 목선을 되찾고 전체 리프팅을 완성합니다.', image: 'https://picsum.photos/seed/ultherapyprime-neck/200/200' },
+    { title: '데콜테(가슴 윗부분)', desc: '가슴 윗부분의 주름과 처짐에 초음파 에너지를 전달하여 매끄럽고 탄력 있는 피부결로 개선합니다.', image: 'https://picsum.photos/seed/ultherapyprime-decolte/200/200' },
+  ],
+  process: [
+    { step: '01', title: '피부 상태 분석·상담', desc: '고민 부위와 피부 처짐 정도를 상담하고 DeepSEE™ 영상으로 피부 두께를 확인하여 카트리지 깊이와 에너지를 계획합니다.', image: 'https://picsum.photos/seed/ultherapyprime-p1/200/200' },
+    { step: '02', title: '세안 및 시술 준비', desc: '깨끗이 세안 후 초음파 전달 젤을 도포하고 부위별 전용 트랜스듀서와 에너지 레벨을 설정합니다.', image: 'https://picsum.photos/seed/ultherapyprime-p2/200/200' },
+    { step: '03', title: '울쎄라피 프라임 시술', desc: 'DeepSEE™ 실시간 영상을 확인하며 1.5·3.0·4.5mm 깊이에 순차적으로 초음파를 조사하여 진피·SMAS층을 자극합니다.', image: 'https://picsum.photos/seed/ultherapyprime-p3/200/200' },
+    { step: '04', title: '진정 케어 및 안내', desc: '시술 후 진정 케어를 진행하고 효과 발현 시기(1~3개월)와 재시술 주기, 주의사항을 안내합니다.', image: 'https://picsum.photos/seed/ultherapyprime-p4/200/200' },
+  ],
+  cautions: [
+    '임신 중이시거나 개방성 상처, 심한 염증성 여드름이 있는 부위는 시술이 제한될 수 있습니다.',
+    '심장 박동기 등 체내 삽입형 전자기기가 있으신 분은 시술 전 반드시 상담해 주세요.',
+    '시술 당일 심한 열 자극(사우나, 찜질방)과 격렬한 운동은 피해 주세요.',
+    '시술 후 일시적인 붉어짐, 부기, 저림은 대부분 수일 내 자연스럽게 완화됩니다.',
+    '효과는 시술 후 1~3개월에 걸쳐 서서히 나타나며 개인차가 있을 수 있습니다.',
+    '자외선 차단제를 꾸준히 사용하여 시술 효과를 오래 유지하세요.',
+  ],
+};
+
 export const shrink: TreatmentData = {
   category: 'Lifting', breadcrumbCategory: '리프팅',
   en: 'Shrink Universe', ko: '슈링크 유니버스',
@@ -518,60 +576,6 @@ export const ollagio: TreatmentData = {
     '시술 부위의 일시적인 붉어짐·열감은 수시간 내 가라앉습니다.',
     '효과는 1~3개월 후부터 서서히 나타나며, 정기 시술로 효과를 유지하세요.',
     '자외선 차단제를 꾸준히 발라 피부 손상을 예방하세요.',
-  ],
-};
-
-export const doubloGold: TreatmentData = {
-  category: 'Lifting', breadcrumbCategory: '리프팅',
-  en: 'Doublo Gold', ko: '더블로골드',
-  tagline: '피부 속 1.5-4.5mm 집속 고강도 초음파로 진피·근막층 동시 개선',
-  subtitle: '기존 더블로리프팅 업그레이드 버전 더블로골드',
-  heroImage: '/images/hero/doubloGold.png',
-  deviceImage: '/images/device/doubloGold.png',
-  bgImage: 'http://www.reoneskin.com/theme/reone/sub/img/s24_process_img01.png',
-  bannerImage: '/images/banner/doubloGold.png',
-  sectionBg: undefined,
-  bandBg: 'http://www.reoneskin.com/theme/reone/sub/img/s24_band_wrap_bg.jpg',
-  faceImage: 'http://www.reoneskin.com/theme/reone/sub/img/s24_twin_img02.png',
-  intro: '하이푸리프팅인 더블로골드는 기존의 더블로리프팅을 업그레이드 한 버전입니다.\n피부 속 1.5-4.5mm까지 집속 고강도 초음파 에너지를 전달하여 진피층의 콜라겐 생성 작용을 촉진하고 근막층의 수축을 유도하여 처진 피부를 탄력있게 개선 해 줍니다.',
-  badges: ['하이푸 리프팅', '1.5-4.5mm 타깃', '진피·근막층 동시', '시술 20분 이내'],
-  themeColor: '#b87090', themeColorEnd: '#9a5a78',
-  concept: 'Dual',
-  features: ['집속 고강도 초음파', '1.5-4.5mm 다중 타깃', '진피·근막 동시', 'SMAS 리프팅', '콜라겐 재생', '전문의 시술'],
-  areas: ['이마', '눈가', '볼', '팔자', '턱선', '목'],
-  points: [
-    { title: '1.5-4.5mm 다중 깊이 타깃', desc: '1.5mm·3.0mm·4.5mm 카트리지로 진피층부터 근막(SMAS)층까지 다중 깊이에 집속 초음파를 전달합니다.' },
-    { title: '강력한 HIFU 리프팅', desc: '집속 고강도 초음파 에너지가 SMAS층을 직접 수축시켜 기존 더블로보다 강력한 리프팅 효과를 제공합니다.' },
-    { title: '자연스러운 결과', desc: '초음파 에너지가 깊은 층부터 단계적으로 작용하여 자연스럽고 균형 잡힌 리프팅 결과를 만들어냅니다.' },
-    { title: '지속적인 콜라겐 재생', desc: '초음파 자극으로 콜라겐 신생 반응을 유도하여 시술 후 3개월까지 효과가 점진적으로 발현됩니다.' },
-  ],
-  benefits: ['SMAS층 리프팅', '강력한 탄력 개선', '콜라겐 재생', '자연스러운 결과', '지속적 효과'],
-  recommendFor: ['강력한 HIFU 리프팅 효과를 원하시는 분', '피부 전반적인 탄력 저하가 고민이신 분', '기존 초음파 리프팅 시술에 아쉬움을 느끼셨던 분'],
-  whyReone: [
-    { title: '전문의 직접 시술', desc: '전문의가 SMAS층 위치를 파악하여 최적의 카트리지로 시술합니다.' },
-    { title: '정품 장비 보유', desc: '정품 더블로골드 장비를 보유하여 안전하고 효과적인 시술을 제공합니다.' },
-    { title: '맞춤 카트리지 설계', desc: '개인 피부 두께와 처짐 정도에 따라 카트리지 종류와 샷 수를 맞춤 설정합니다.' },
-    { title: '초음파 이미징 활용', desc: '초음파 이미징으로 SMAS층 위치를 실시간 확인하며 정확하고 안전한 에너지 전달을 보장합니다.' },
-  ],
-  areaDetails: [
-    { title: '이마 리프팅', desc: '1.5mm·3.0mm 카트리지로 이마 진피~SMAS층까지 동시에 자극하여 이마를 끌어올리고 주름을 개선합니다.', image: 'https://picsum.photos/seed/doublo-forehead/200/200' },
-    { title: '눈가 탄력 회복', desc: '눈가의 처짐과 잔주름에 집속 초음파를 조사하여 탄력을 회복하고 또렷한 눈매를 만들어드립니다.', image: 'https://picsum.photos/seed/doublo-eye/200/200' },
-    { title: '볼·팔자 리프팅', desc: '볼의 처짐과 팔자주름에 더블로골드의 강력한 HIFU 에너지를 전달하여 동안 라인을 회복합니다.', image: 'https://picsum.photos/seed/doublo-cheek/200/200' },
-    { title: '턱선 V라인 완성', desc: '흐려진 턱선에 집속 초음파를 조사하여 근막층을 수축시키고 선명한 V라인을 만들어냅니다.', image: 'https://picsum.photos/seed/doublo-jaw/200/200' },
-    { title: '팔자·입가 주름', desc: '입 주변의 마리오네트 라인과 팔자 주름에 에너지를 전달하여 자연스럽게 완화하고 편안한 인상을 만듭니다.', image: 'https://picsum.photos/seed/doublo-mouth/200/200' },
-    { title: '목선·목 주름', desc: '목의 가로 주름과 피부 처짐에 더블로골드를 적용하여 탄력 있는 목선을 유지하고 전체 리프팅을 마무리합니다.', image: 'https://picsum.photos/seed/doublo-neck/200/200' },
-  ],
-  process: [
-    { step: '01', title: '피부 처짐 분석·상담', desc: '초음파 이미징으로 SMAS층 위치를 파악하고 카트리지 종류와 에너지를 개인 맞춤으로 설계합니다.', image: 'https://picsum.photos/seed/doublo-p1/200/200' },
-    { step: '02', title: '세안 및 시술 준비', desc: '클렌징 후 초음파 젤을 도포하고 시술 부위를 마킹하여 에너지가 정확하게 전달되도록 준비합니다.', image: 'https://picsum.photos/seed/doublo-p2/200/200' },
-    { step: '03', title: '더블로골드 HIFU 시술', desc: '진피층부터 SMAS층까지 집속 초음파 에너지를 단계별로 조사하여 강력한 리프팅 효과를 냅니다.', image: 'https://picsum.photos/seed/doublo-p3/200/200' },
-    { step: '04', title: '진정 케어 및 안내', desc: '시술 후 진정 패드를 적용하고 효과 발현 시기(1~3개월)와 재시술 주기를 안내합니다.', image: 'https://picsum.photos/seed/doublo-p4/200/200' },
-  ],
-  cautions: [
-    '시술 직후 일시적인 붉어짐과 민감함은 하루 이내 완화됩니다.',
-    '시술 당일 사우나, 찜질, 격렬한 운동은 삼가 주세요.',
-    '효과는 1~3개월에 걸쳐 최대로 나타나며 보통 6~12개월 이상 지속됩니다.',
-    '예민한 피부 부위에 일시적인 저림·당김이 있을 수 있으며 수일 내 완화됩니다.',
   ],
 };
 
